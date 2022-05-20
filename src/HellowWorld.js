@@ -1,10 +1,13 @@
-import React from 'react'
+import React from "react";
+import { Message } from "./Message";
 
-export default function HellowWorld() {
-  return (
-    <div>
-       <h1>Hellow World!</h1>
-       <p>What a beautiful day!</p>
-    </div>
-  )
+export class HellowWorld extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Hellow World!</h1>
+        <Message />
+      </div>
+    );
+  }
 }

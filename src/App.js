@@ -1,4 +1,4 @@
-import HellowWorld from './HellowWorld';
+import { HellowWorld } from "./HellowWorld";
 
 function App() {
   return (
