@@ -6,14 +6,12 @@ export class Welcome extends React.Component {
     return (
       <div>
         <p>Welcome {this.props.name}!</p>
-        <Age age={this.props.age} />
+        {this.props.age > 18 && <Age age={this.props.age} />}
       </div>
     );
   }
 }
 
-// we can set props by default like code below
-// is that only for javascript class specs or anything react mixed ?
 
 Welcome.defaultProps = {
   name: "Giorgi",
