@@ -5,6 +5,7 @@ export class Welcome extends React.Component {
     return (
       <div>
         <p>Welcome {this.props.name}!</p>
+        <p>Your age is {this.props.age}.</p>
       </div>
     );
   }
@@ -14,6 +15,7 @@ export class Welcome extends React.Component {
 // is that only for javascript class specs or anything react mixed ?
 
 Welcome.defaultProps = {
-  name: "Giulia"
+  name: "Giorgi",
+  age: 22
 }
 
