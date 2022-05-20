@@ -7,7 +7,8 @@ export class App extends React.Component {
     return (
       <div>
         <HellowWorld />
-        <Welcome />
+        // we can embedd any valid JSX expression needed by method below
+        <Welcome name={<strong>Pippo</strong>} />
       </div>
     );
   }
