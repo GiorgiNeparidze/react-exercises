@@ -9,3 +9,11 @@ export class Welcome extends React.Component {
     );
   }
 }
+
+// we can set props by default like code below
+// is that only for javascript class specs or anything react mixed ?
+
+Welcome.defaultProps = {
+  name: "Giulia"
+}
+
