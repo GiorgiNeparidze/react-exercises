@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
-export class CounterDisplay  extends React.Component {
+export class CounterDisplay extends React.Component {
   render() {
-    return <h1>{this.props.count}</h1>
+    return <h1>{this.props.count}</h1>;
   }
 }
