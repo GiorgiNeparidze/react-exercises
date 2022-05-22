@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
+import {CounterDisplay} from "./CounterDisplay ";
 
-export default class Counter extends Component {
+export default class Counter extends React.Component {
   state = {
     count: this.props.initial,
   };
@@ -16,6 +17,10 @@ export default class Counter extends Component {
   }
 
   render() {
-    return <h1>Actual count is: {this.state.count}</h1>;
+    return(
+      <div>
+        <CounterDisplay count={this.state.count} />;
+      </div>
+    ) 
   }
 }
