@@ -25,9 +25,16 @@ export class Login extends react.Component {
     }
   };
 
-
   btnClickHandler = () => {
     this.props.onLogin(this.state);
+  };
+
+  reset = () => {
+    this.setState({
+      username: "",
+      password: "",
+      remember: false,
+    });
   };
 
   render() {
@@ -50,12 +57,10 @@ export class Login extends react.Component {
           checked={this.state.remember}
           onChange={this.logInEventHandler}
         />
-        <button
-          disabled={this.state.btnenable}
-          onClick={this.btnClickHandler}
-        >
+        <button disabled={this.state.btnenable} onClick={this.btnClickHandler}>
           Log In!
         </button>
+        <button onClick={this.reset}>Reset!</button>
       </div>
     );
   }
