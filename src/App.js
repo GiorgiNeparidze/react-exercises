@@ -11,13 +11,13 @@ export class App extends React.Component {
   render() {
     return (
       <div>
-        <HellowWorld />
+        {/* <HellowWorld />
         <Welcome name="John" age={17} />
         <Welcome name="John" age={37} />
         <Counter initial ={0}  incrementBy={1}  incrementEvery={1000}/>
         <ClickCounter />
         <ClickTracker />
-        <InteractiveWelcome />
+        <InteractiveWelcome /> */}
         <Login />
       </div>
     );

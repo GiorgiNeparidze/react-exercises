@@ -22,9 +22,12 @@ export class Login extends react.Component {
       this.setState({
         btnenable: false,
       });
+    } else {
+      this.setState({
+        btnenable: true,
+      });
     }
   };
-
 
   btnClickHandler = () => {
     this.props.onLogin(this.state);
@@ -50,10 +53,7 @@ export class Login extends react.Component {
           checked={this.state.remember}
           onChange={this.logInEventHandler}
         />
-        <button
-          disabled={this.state.btnenable}
-          onClick={this.btnClickHandler}
-        >
+        <button disabled={this.state.btnenable} onClick={this.btnClickHandler}>
           Log In!
         </button>
       </div>
