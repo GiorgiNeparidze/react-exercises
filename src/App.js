@@ -22,7 +22,7 @@ export class App extends React.Component {
         <ClickCounter />
         <ClickTracker />
         <InteractiveWelcome /> */}
-        <Container>
+        <Container title={"Look at this uggly form :D"}>
           <Login />
         </Container>
         {/* <UncontrolledLogin /> */}
