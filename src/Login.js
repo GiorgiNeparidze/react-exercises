@@ -57,7 +57,11 @@ export class Login extends react.Component {
           checked={this.state.remember}
           onChange={this.logInEventHandler}
         />
-        <button disabled={this.state.btnenable} onClick={this.btnClickHandler}>
+        <button
+          className={this.state.password.length >= 8 ? "green-btn" : "red-btn"}
+          disabled={this.state.btnenable}
+          onClick={this.btnClickHandler}
+        >
           Log In!
         </button>
         <button onClick={this.reset}>Reset!</button>

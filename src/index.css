@@ -16,3 +16,12 @@ code {
   background-color: black;
   color: white;
 }
+
+
+.red-btn {
+  background-color: red;
+}
+
+.green-btn {
+  background-color: green;
+}
