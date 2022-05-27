@@ -20,6 +20,13 @@ export default class ToDoList extends Component {
     event.target.elements.newEl.value = "";
   };
 
+  HandleResset = (event) => {
+    event.preventDefault();
+    this.setState({
+      listItems: [],
+    });
+  };
+
   render() {
     return (
       <div>
@@ -36,6 +43,7 @@ export default class ToDoList extends Component {
           />
           <button>Add</button>
         </form>
+        <button onClick={this.HandleResset}>Reset</button>
       </div>
     );
   }
