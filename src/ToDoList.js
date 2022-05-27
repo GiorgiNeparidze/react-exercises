@@ -18,6 +18,7 @@ export default class ToDoList extends Component {
     });
 
     event.target.elements.newEl.value = "";
+    // avevo pulito su esercizio scorso per curiosita
   };
 
   render() {
