@@ -27,12 +27,22 @@ export default class ToDoList extends Component {
     });
   };
 
+  HandleRemove = (i) => {
+    const listItemsArr = this.state.listItems;
+    listItemsArr.splice(i, 1);
+    this.setState({
+      listItems: listItemsArr,
+    });
+  };
+
   render() {
     return (
       <div>
         <ul>
           {this.state.listItems.map((item, i) => (
-            <li key={i}>{item}</li>
+            <li key={i}>
+              {item} <button onClick={() => this.HandleRemove(i)}>Remove</button>
+            </li>
           ))}
         </ul>
         <form onSubmit={this.SubmitEvent}>
