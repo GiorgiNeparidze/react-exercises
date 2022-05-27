@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import ToDoList from "./ToDoList";
+// import ClickCounter from "./ClickCounter";
+// import Counter from "./Counter";
+// import { HellowWorld } from "./HellowWorld";
+// import { Welcome } from "./Welcome";
+// import ClickTracker from "./ClickTracker";
+// import { InteractiveWelcome } from "./InteractiveWelcome";
+import { Login } from "./Login";
+// import UncontrolledLogin from "./UncontrolledLogin ";
+import "./index.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends React.Component {
+  render() {
+    return (
+      <div>
+        {/* <HellowWorld /> */}
+        {/* <Welcome name="John" age={17} />
+        <Welcome name="John" age={37} /> */}
+        {/* <Counter initial ={0}  incrementBy={1}  incrementEvery={1000}/>
+        <ClickCounter />
+        <ClickTracker />
+        <InteractiveWelcome /> */}
+        <Login />
+        {/* <UncontrolledLogin /> */}
+        {/* <ToDoList /> */}
+      </div>
+    );
+  }
 }
-
-export default App;
