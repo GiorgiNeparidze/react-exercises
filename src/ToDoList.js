@@ -2,11 +2,11 @@ import React, { Component } from "react";
 
 export default class ToDoList extends Component {
   state = {
-    listItems: ['john'],
+    listItems: ["john"],
   };
 
   SubmitEvent = (event) => {
-      event.preventDefault();
+    event.preventDefault();
 
     const newItem = event.target.elements.newEl.value;
     const listItemsArr = this.state.listItems;
@@ -25,10 +25,10 @@ export default class ToDoList extends Component {
       <div>
         <ul>
           {this.state.listItems.map((item, i) => (
-            <li key = {i}>{item}</li>
+            <li key={i}>{item}</li>
           ))}
         </ul>
-        <form onSubmit={this.SubmitEvent} >
+        <form onSubmit={this.SubmitEvent}>
           <input
             type="text"
             placeholder="Type new item and press to Add button below."
