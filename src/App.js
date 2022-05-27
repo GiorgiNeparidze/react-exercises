@@ -9,6 +9,7 @@ import React from "react";
 import { Login } from "./Login";
 // import UncontrolledLogin from "./UncontrolledLogin ";
 import "./index.css";
+import Container from "./Container";
 
 export class App extends React.Component {
   render() {
@@ -21,7 +22,9 @@ export class App extends React.Component {
         <ClickCounter />
         <ClickTracker />
         <InteractiveWelcome /> */}
-        <Login />
+        <Container>
+          <Login />
+        </Container>
         {/* <UncontrolledLogin /> */}
         {/* <ToDoList /> */}
       </div>

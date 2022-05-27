@@ -25,3 +25,8 @@ code {
 .green-btn {
   background-color: green;
 }
+
+.container{
+  background-color: white;
+  border: 3px solid red;
+}
