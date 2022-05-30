@@ -16,7 +16,7 @@ export class DisplayLanguage extends React.Component {
         return (
             <div>
                 <LanguageContext.Consumer>
-                    { Language => Languages[Language].hellow }                      
+                    { Language => <h1>{Language}</h1> }                      
                 </LanguageContext.Consumer>
             </div>
         )
