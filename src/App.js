@@ -3,7 +3,7 @@ import React from "react";
 // import ClickCounter from "./ClickCounter";
 // import Counter from "./Counter";
 // import { HellowWorld } from "./HellowWorld";
-import  Welcome  from "./Welcome";
+// import  Welcome  from "./Welcome";
 // import ClickTracker from "./ClickTracker";
 // import { InteractiveWelcome } from "./InteractiveWelcome";
 // import { Login } from "./Login";
@@ -12,6 +12,7 @@ import "./index.css";
 // import { DisplayLanguage } from "./DisplayLanguage";
 // import { LanguageContext } from "./LanguageContext";
 // import Container from "./Container";
+import Sum from "./Sum";
 
 export class App extends React.Component {
   // state = {
@@ -29,7 +30,7 @@ export class App extends React.Component {
       <div>
         {/* <HellowWorld /> */}
         {/* <Welcome name="John" age={17} />} */}
-        <Welcome name="John" age={37} />
+        {/* <Welcome name="John" age={37} /> */}
         {/* <Counter initial ={0}  incrementBy={1}  incrementEvery={1000}/>
         <ClickCounter />
         <ClickTracker />
@@ -49,7 +50,6 @@ export class App extends React.Component {
           }}
         /> */}
         {/* <DisplayLanguage /> */}
-
         {/* <div>
           <select onChange={this.changeLanguage} value={this.state.language}>
             <option value="ru">Русский</option>
@@ -61,6 +61,7 @@ export class App extends React.Component {
             </LanguageContext.Provider>
           </div>
       </div>*/}
+        <Sum nums={[1, 5, 7, 8, 9]} />
       </div>
     );
   }
