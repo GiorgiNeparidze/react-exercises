@@ -1,35 +1,35 @@
 import React from "react";
-import ToDoList from "./ToDoList";
+// import ToDoList from "./ToDoList";
 // import ClickCounter from "./ClickCounter";
 // import Counter from "./Counter";
 // import { HellowWorld } from "./HellowWorld";
-// import { Welcome } from "./Welcome";
+import  Welcome  from "./Welcome";
 // import ClickTracker from "./ClickTracker";
 // import { InteractiveWelcome } from "./InteractiveWelcome";
 // import { Login } from "./Login";
 // import UncontrolledLogin from "./UncontrolledLogin ";
 import "./index.css";
-import { DisplayLanguage } from "./DisplayLanguage";
-import { LanguageContext } from "./LanguageContext";
+// import { DisplayLanguage } from "./DisplayLanguage";
+// import { LanguageContext } from "./LanguageContext";
 // import Container from "./Container";
 
 export class App extends React.Component {
-  state = {
-    language: "ru",
-  };
+  // state = {
+  //   language: "ru",
+  // };
 
-  changeLanguage = (event) => {
-    this.setState({
-      language: event.target.value,
-    });
-  };
+  // changeLanguage = (event) => {
+  //   this.setState({
+  //     language: event.target.value,
+  //   });
+  // };
 
   render() {
     return (
       <div>
         {/* <HellowWorld /> */}
-        {/* <Welcome name="John" age={17} />
-        <Welcome name="John" age={37} /> */}
+        {/* <Welcome name="John" age={17} />} */}
+        <Welcome name="John" age={37} />
         {/* <Counter initial ={0}  incrementBy={1}  incrementEvery={1000}/>
         <ClickCounter />
         <ClickTracker />
@@ -50,7 +50,7 @@ export class App extends React.Component {
         /> */}
         {/* <DisplayLanguage /> */}
 
-        <div>
+        {/* <div>
           <select onChange={this.changeLanguage} value={this.state.language}>
             <option value="ru">Русский</option>
             <option value="en">English</option>
@@ -60,7 +60,7 @@ export class App extends React.Component {
               <DisplayLanguage />
             </LanguageContext.Provider>
           </div>
-        </div>
+      </div>*/}
       </div>
     );
   }
