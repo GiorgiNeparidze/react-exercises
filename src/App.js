@@ -1,15 +1,15 @@
 import React from "react";
-// import ToDoList from "./ToDoList";
+import ToDoList from "./ToDoList";
 // import ClickCounter from "./ClickCounter";
 // import Counter from "./Counter";
 // import { HellowWorld } from "./HellowWorld";
 // import { Welcome } from "./Welcome";
 // import ClickTracker from "./ClickTracker";
 // import { InteractiveWelcome } from "./InteractiveWelcome";
-import { Login } from "./Login";
+// import { Login } from "./Login";
 // import UncontrolledLogin from "./UncontrolledLogin ";
 import "./index.css";
-import Container from "./Container";
+// import Container from "./Container";
 
 export class App extends React.Component {
   render() {
@@ -22,11 +22,20 @@ export class App extends React.Component {
         <ClickCounter />
         <ClickTracker />
         <InteractiveWelcome /> */}
-        <Container title={"Look at this uggly form :D"}>
+        {/* <Container title={"Look at this uggly form :D"}>
           <Login />
-        </Container>
+        </Container> */}
         {/* <UncontrolledLogin /> */}
-        {/* <ToDoList /> */}
+        <ToDoList
+          render={(listItems, HandleRemove) => {
+            return listItems.map((item, i) => (
+              <li key={i}>
+                {item}{" "}
+                <button onClick={() => HandleRemove(i)}>Remove</button>
+              </li>
+            ));
+          }}
+        />
       </div>
     );
   }
