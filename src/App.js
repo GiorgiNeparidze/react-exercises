@@ -9,9 +9,21 @@ import ToDoList from "./ToDoList";
 // import { Login } from "./Login";
 // import UncontrolledLogin from "./UncontrolledLogin ";
 import "./index.css";
+import { DisplayLanguage } from "./DisplayLanguage";
+import { LanguageContext } from "./LanguageContext";
 // import Container from "./Container";
 
 export class App extends React.Component {
+  state = {
+    language: "ru",
+  };
+
+  changeLanguage = (event) => {
+    this.setState({
+      language: event.target.value,
+    });
+  };
+
   render() {
     return (
       <div>
@@ -26,7 +38,7 @@ export class App extends React.Component {
           <Login />
         </Container> */}
         {/* <UncontrolledLogin /> */}
-        <ToDoList
+        {/* <ToDoList
           render={(listItems, HandleRemove) => {
             return listItems.map((item, i) => (
               <li key={i}>
@@ -35,7 +47,20 @@ export class App extends React.Component {
               </li>
             ));
           }}
-        />
+        /> */}
+        {/* <DisplayLanguage /> */}
+
+        <div>
+          <select onChange={this.changeLanguage} value={this.state.language}>
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+          </select>
+          <div>
+            <LanguageContext.Provider value={this.state.language}>
+              <DisplayLanguage />
+            </LanguageContext.Provider>
+          </div>
+        </div>
       </div>
     );
   }
