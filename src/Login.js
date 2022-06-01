@@ -1,71 +1,49 @@
-import react from "react";
-
-export class Login extends react.Component {
-  state = {
+import { useState } from "react";
+export default function Login() {
+  const [credentials, setCredentials] = useState({
     username: "",
     password: "",
     remember: false,
     btnenable: true,
-  };
+  });
 
-  logInEventHandler = (event) => {
+  const logInEventHandler = (event) => {
     const name = event.target.name;
     const type = event.target.type;
     const value = event.target.value;
     const check = event.target.checked;
+    console.log(name, type, value, check);
 
-    this.setState({
-      [name]: type === "checkbox" ? check : value,
-    });
-
-    if (this.state.username && this.state.password) {
-      this.setState({
-        btnenable: false,
-      });
-    }
-  };
-
-  btnClickHandler = () => {
-    this.props.onLogin(this.state);
-  };
-
-  reset = () => {
-    this.setState({
-      username: "",
-      password: "",
-      remember: false,
+    setCredentials((credentials) => {
+      return {
+        ...credentials,
+        [name]: type === "checkbox" ? check : value,
+      };
     });
   };
 
-  render() {
-    return (
-      <div>
-        <input
-          name="username"
-          value={this.state.username}
-          onChange={this.logInEventHandler}
-        />
-        <input
-          name="password"
-          type="password"
-          value={this.state.password}
-          onChange={this.logInEventHandler}
-        />
-        <input
-          name="remember"
-          type="checkbox"
-          checked={this.state.remember}
-          onChange={this.logInEventHandler}
-        />
-        <button
-          className={this.state.password.length >= 8 ? "green-btn" : "red-btn"}
-          disabled={this.state.btnenable}
-          onClick={this.btnClickHandler}
-        >
-          Log In!
-        </button>
-        <button onClick={this.reset}>Reset!</button>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <input
+        name="username"
+        value={credentials.username}
+        onChange={logInEventHandler}
+      />
+      <input
+        name="password"
+        type="password"
+        value={credentials.password}
+        onChange={logInEventHandler}
+      />
+      <input
+        name="remember"
+        type="checkbox"
+        checked={credentials.remember}
+        onChange={logInEventHandler}
+      />
+      <button disabled={!(credentials.username && credentials.password)}>
+        Log In!
+      </button>
+    </div>
+  );
 }
