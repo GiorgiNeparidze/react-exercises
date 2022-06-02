@@ -1,5 +1,6 @@
 import React from "react";
 import GithubUser from "./GithubUser";
+import GithubUserList from "./GithubUserList";
 
 // import Counter from "./Counter";
 // import Counter from "./Counter";
@@ -26,6 +27,7 @@ export class App extends React.Component {
         {/* <ClickCounter onCounterChange={(counter) => console.log(counter)} /> */}
         {/* <Counter /> */}
         <GithubUser username={'GiorgiNeparidze'}/>
+        <GithubUserList/>
       </div>
     );
   }
