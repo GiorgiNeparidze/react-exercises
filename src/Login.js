@@ -1,5 +1,5 @@
 import { useState } from "react";
-export default function Login() {
+function useLogin() {
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
@@ -21,24 +21,32 @@ export default function Login() {
       };
     });
   };
+  return {
+    credentials: credentials,
+    trackLogin: logInEventHandler,
+  };
+}
+
+export default function Login() {
+  const { credentials, trackLogin } = useLogin();
   return (
     <div>
       <input
         name="username"
         value={credentials.username}
-        onChange={logInEventHandler}
+        onChange={trackLogin}
       />
       <input
         name="password"
         type="password"
         value={credentials.password}
-        onChange={logInEventHandler}
+        onChange={trackLogin}
       />
       <input
         name="remember"
         type="checkbox"
         checked={credentials.remember}
-        onChange={logInEventHandler}
+        onChange={trackLogin}
       />
       <button disabled={!(credentials.username && credentials.password)}>
         Log In!
