@@ -21,7 +21,6 @@ function useLogin() {
       };
     });
   };
-<<<<<<< HEAD
   return {
     credentials: credentials,
     trackLogin: logInEventHandler,
@@ -30,9 +29,7 @@ function useLogin() {
 
 export default function Login() {
   const { credentials, trackLogin } = useLogin();
-=======
 
->>>>>>> costum-hooks-02
   return (
     <div>
       <input
