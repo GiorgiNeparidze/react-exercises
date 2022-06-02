@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-export default function GithubUser({ username }) {
+function useGithubUser (username) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -12,6 +12,14 @@ export default function GithubUser({ username }) {
         console.log(data);
       });
   }, [username]);
+
+  return data
+
+}
+
+export default function GithubUser({username}) {
+  const data = useGithubUser(username)
+  
 
   return <div>GithubUser: {data && data.name}</div>;
 }
