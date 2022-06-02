@@ -1,9 +1,10 @@
 import React from "react";
+import GithubUser from "./GithubUser";
 
 // import Counter from "./Counter";
 // import Counter from "./Counter";
 // import ClickCounter from "./ClickCounter";
-import Counter from "./Counter";
+// import Counter from "./Counter";
 // import { HellowWorld } from "./HellowWorld";
 // import { Welcome } from "./Welcome";
 // import ClickTracker from "./ClickTracker";
@@ -23,7 +24,8 @@ export class App extends React.Component {
         <InteractiveWelcome />  */}
         {/* <Login /> */}
         {/* <ClickCounter onCounterChange={(counter) => console.log(counter)} /> */}
-        <Counter />
+        {/* <Counter /> */}
+        <GithubUser username={'GiorgiNeparidze'}/>
       </div>
     );
   }
