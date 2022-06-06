@@ -1,5 +1,6 @@
 import React from "react";
-import ToDoList from "./ToDoList";
+
+// import ToDoList from "./ToDoList";
 // import ClickCounter from "./ClickCounter";
 // import Counter from "./Counter";
 // import { HellowWorld } from "./HellowWorld";
@@ -9,13 +10,13 @@ import ToDoList from "./ToDoList";
 // import { Login } from "./Login";
 // import UncontrolledLogin from "./UncontrolledLogin ";
 import "./index.css";
-import { DisplayLanguage } from "./DisplayLanguage";
+import DisplayLanguage from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
 // import Container from "./Container";
 
 export class App extends React.Component {
   state = {
-    language: "ru",
+    language: "it",
   };
 
   changeLanguage = (event) => {
@@ -52,6 +53,7 @@ export class App extends React.Component {
 
         <div>
           <select onChange={this.changeLanguage} value={this.state.language}>
+            <option value="it">Italiano</option>
             <option value="ru">Русский</option>
             <option value="en">English</option>
           </select>
