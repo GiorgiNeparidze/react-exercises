@@ -10,9 +10,10 @@ export class App extends React.Component {
     return (
       <div>
         <Routes>
-          <Route path="/" element={<Welcome name="John" />} />
+          {/* <Route path="/" element={<Welcome name="John" />} /> */}
           <Route path="counter" element={<Counter />} />
           <Route path="users/username" element={<ShowGithubUser />} />
+          <Route path="*" element={<h1>404: Not Found</h1>}/>
         </Routes>
         <Link to={"/"}>Welcome !</Link>
         <Link to={"/counter"}>Count !</Link>
