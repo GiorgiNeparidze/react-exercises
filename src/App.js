@@ -1,13 +1,16 @@
 import React from "react";
-import Welcome from "./Welcome";
+
 import "./index.css";
 import { Routes, Route } from "react-router-dom";
+import Counter from "./Counter";
+import Welcome from "./Welcome";
 
 export class App extends React.Component {
   render() {
     return (
       <Routes>
-        <Route path="/" element={<Welcome name="John" age={17} />} />
+        <Route path="/" element={<Welcome name="John"/>} />
+        <Route path="counter" element={<Counter />} />
       </Routes>
     );
   }
