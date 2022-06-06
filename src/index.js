@@ -6,3 +6,4 @@ import { Root } from "./Root";
 const root = document.querySelector("#root");
 
 ReactDOM.render(<Root />, root);
+
