@@ -1,30 +1,17 @@
 import React from "react";
-// import ToDoList from "./ToDoList";
-// import ClickCounter from "./ClickCounter";
-// import Counter from "./Counter";
-// import { HellowWorld } from "./HellowWorld";
-// import { Welcome } from "./Welcome";
-// import ClickTracker from "./ClickTracker";
-// import { InteractiveWelcome } from "./InteractiveWelcome";
-import { Login } from "./Login";
-// import UncontrolledLogin from "./UncontrolledLogin ";
+import Welcome from "./Welcome";
 import "./index.css";
+import { Routes, Route } from "react-router-dom";
+import ShowGithubUser from "./ShowGithubUser";
+
 
 export class App extends React.Component {
   render() {
     return (
-      <div>
-        {/* <HellowWorld /> */}
-        {/* <Welcome name="John" age={17} />
-        <Welcome name="John" age={37} /> */}
-        {/* <Counter initial ={0}  incrementBy={1}  incrementEvery={1000}/>
-        <ClickCounter />
-        <ClickTracker />
-        <InteractiveWelcome /> */}
-        <Login />
-        {/* <UncontrolledLogin /> */}
-        {/* <ToDoList /> */}
-      </div>
+      <Routes>
+        <Route path='/' element={<Welcome name="John" />} />
+        <Route path="users/:username" element={<ShowGithubUser />}/>
+      </Routes>
     );
   }
 }

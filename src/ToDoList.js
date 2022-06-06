@@ -38,13 +38,9 @@ export default class ToDoList extends Component {
   render() {
     return (
       <div>
-        <ul>
-          {this.state.listItems.map((item, i) => (
-            <li key={i}>
-              {item} <button onClick={() => this.HandleRemove(i)}>Remove</button>
-            </li>
-          ))}
-        </ul>
+        <div>
+          <ul>{this.props.render(this.state.listItems, this.HandleRemove)}</ul>
+        </div>
         <form onSubmit={this.SubmitEvent}>
           <input
             type="text"
