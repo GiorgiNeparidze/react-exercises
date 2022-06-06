@@ -1,5 +1,5 @@
 import React from "react";
-import ToDoList from "./ToDoList";
+// import ToDoList from "./ToDoList";
 // import ClickCounter from "./ClickCounter";
 // import Counter from "./Counter";
 // import { HellowWorld } from "./HellowWorld";
@@ -52,6 +52,7 @@ export class App extends React.Component {
 
         <div>
           <select onChange={this.changeLanguage} value={this.state.language}>
+            <option value="it">Italiano</option>
             <option value="ru">Русский</option>
             <option value="en">English</option>
           </select>
