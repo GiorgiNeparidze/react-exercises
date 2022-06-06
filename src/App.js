@@ -1,9 +1,11 @@
 import React from "react";
 import Counter from "./Counter";
 import Welcome from "./Welcome";
+
 import "./index.css";
 import { Routes, Route, Link } from "react-router-dom";
 import ShowGithubUser from "./ShowGithubUser";
+import GithubUserList from "./GithubUserList";
 
 export class App extends React.Component {
   render() {
@@ -12,12 +14,13 @@ export class App extends React.Component {
         <Routes>
           {/* <Route path="/" element={<Welcome name="John" />} /> */}
           <Route path="counter" element={<Counter />} />
-          <Route path="users/username" element={<ShowGithubUser />} />
-          <Route path="*" element={<h1>404: Not Found</h1>}/>
+          <Route path="users" element={<GithubUserList />}>
+            <Route path=":username" element={<ShowGithubUser />} />
+          </Route>
         </Routes>
         <Link to={"/"}>Welcome !</Link>
         <Link to={"/counter"}>Count !</Link>
-        <Link to={"users/username"}>Github User IS</Link>
+        <Link to={"users"}>Github User IS</Link>
       </div>
     );
   }

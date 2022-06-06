@@ -3,7 +3,7 @@ import GithubUser from "./GithubUser";
 import { useParams } from "react-router-dom";
 
 export default function ShowGithubUser() {
-  const {username = "GiorgiNeparidze" } = useParams();
+  const { username } = useParams();
 
   return (
     <div>
