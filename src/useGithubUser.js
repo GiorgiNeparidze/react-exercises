@@ -7,7 +7,11 @@ const fetcher = (url) =>
 export default function useGithubUser(username) {
   console.log(username);
   const url = `https://api.github.com/users/${username}`;
-  const { data, error } = useSWR(() => url , fetcher);
+  const { data, error, mutate } = useSWR(() => url , fetcher);
 
-  return { data, error };
+  function onRefresh (){
+    mutate()
+  }
+
+  return { data, error, onRefresh };
 }
