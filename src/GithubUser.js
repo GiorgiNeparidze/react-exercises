@@ -1,9 +1,15 @@
 import React from "react";
-import useGithubUser from './useGithubUser'
+import useGithubUser from "./useGithubUser";
 
+export default function GithubUser(props) {
+  const { data, error } = useGithubUser(props.username);
+  console.log(data)
 
-export default function GithubUser({ username }) {
-  const data = useGithubUser(username);
-
-  return <div>GithubUser: {data && data.name}</div>;
+  return (
+    <div>
+      {!data && !error && <h1>Loading...</h1>}
+      {!error && !props.username && <h1>Check your username!</h1>}
+      {data && !error&& <h1>Github User: {data.name}</h1>}
+    </div>
+  );
 }
