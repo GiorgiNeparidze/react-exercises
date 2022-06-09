@@ -44,4 +44,4 @@ export function countReducer(state = defaultState, action) {
   }
 }
 
-export const store = createStore(countReducer)
+//export const store = createStore(countReducer)
